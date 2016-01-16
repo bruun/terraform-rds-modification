@@ -10,6 +10,7 @@ resource "aws_db_instance" "mydatabase" {
   engine_version = "9.4.5"
   allocated_storage = 10
   instance_class = "db.t2.micro"
+  backup_retention_period = 14
 
   name = "mydatabase"
   username = "${var.aws_database_username}"
